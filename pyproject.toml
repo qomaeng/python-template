@@ -26,9 +26,6 @@ dev = [
   "ruff~=0.13",
 ]
 
-[tool.pdm]
-distribution = false
-
 [tool.pdm.build]
 package-dir = "src"
 includes = ["template"]
