@@ -1,0 +1,2 @@
+[install]
+cache = false # Never set true; some program(e.g. pyright) can't resolve modules

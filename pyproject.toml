@@ -52,6 +52,8 @@ dev = "uvicorn --host localhost --port 3000 template.app:app --reload"
 start = "uvicorn --host 0.0.0.0 --port 3000 template.app:app"
 
 [tool.pyright]
+venvPath = "."
+venv = ".venv"
 typeCheckingMode = "basic"         # "strict"
 reportMissingTypeStubs = "warning"
 pythonVersion = "3.13"
