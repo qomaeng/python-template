@@ -1,9 +1,0 @@
-{
-  "include": ["template"],
-
-  "pythonVersion": "3.13",
-  "venvPath": ".",
-  "venv": ".venv",
-
-  "typeCheckingMode": "strict"
-}

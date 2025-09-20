@@ -30,6 +30,13 @@ dev = [
 module-root = "."
 source-include = ["template/**"]
 
+[tool.pyright]
+include = ["template"]
+pythonVersion = "3.13"
+venvPath = "."
+venv = ".venv"
+typeCheckingMode = "strict"
+
 [tool.ruff]
 line-length = 88
 target-version = "py313"
