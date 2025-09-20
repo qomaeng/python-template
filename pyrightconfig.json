@@ -1,0 +1,10 @@
+{
+  "include": ["template"],
+
+  "pythonVersion": "3.13",
+
+  "typeCheckingMode": "strict",
+  "reportMissingImports": "error",
+  "reportUnusedImport": "error",
+  "reportUnusedVariable": "error"
+}
