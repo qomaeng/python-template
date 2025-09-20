@@ -5,8 +5,5 @@
   "venvPath": ".",
   "venv": ".venv",
 
-  "typeCheckingMode": "strict",
-  "reportMissingImports": "error",
-  "reportUnusedImport": "error",
-  "reportUnusedVariable": "error"
+  "typeCheckingMode": "strict"
 }
