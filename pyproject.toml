@@ -54,7 +54,7 @@ select = [
   "UP",  # pyupgrade
 ]
 ignore = [
-  "E203", # whitespace before ':', handled by black
+  # "E203", # whitespace before ':', handled by black
   "E501", # line too long, handled by black
   "S101", # assert
 ]
