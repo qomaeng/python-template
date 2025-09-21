@@ -75,7 +75,6 @@ branch = true
 source = ["template"]
 
 [tool.coverage.report]
-show_covered = true
 show_missing = true
 
 [tool.coverage.html]
