@@ -6,9 +6,7 @@ build-backend = "uv_build"
 name = "template"
 version = "0.0.1"
 description = "Python template"
-authors = [
-  { name = "qomaeng", email = "qomaeng@gmail.com" }
-]
+authors = [{ name = "qomaeng", email = "qomaeng@gmail.com" }]
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
@@ -26,19 +24,21 @@ dev = [
 ]
 
 [tool.uv.build-backend]
-module-root = "."
-source-include = ["template/**"]
+module-root = "src"
 
 [tool.pyright]
-include = ["template"]
+include = ["src", "tests"]
+exclude = ["**/.*", "**/__pycache__"]
 pythonVersion = "3.13"
 venvPath = "."
 venv = ".venv"
 typeCheckingMode = "strict"
 
 [tool.ruff]
-line-length = 88
+include = ["pyproject.toml", "{src,tests}/**/*.{py,pyi}"]
+extend-exclude = ["**/.*"]
 target-version = "py313"
+line-length = 88
 
 [tool.ruff.lint]
 select = [
@@ -54,25 +54,30 @@ select = [
   "UP",  # pyupgrade
 ]
 ignore = [
-  # "E203", # whitespace before ':', handled by black
   "E501", # line too long, handled by black
   "S101", # assert
 ]
 
 [tool.black]
-line-length = 88
+include = '^/(src|tests)/.*\.pyi?$'
+extend-exclude = '''
+(
+  /\.[^/]+
+)
+'''
 target-version = ["py313"]
+line-length = 88
 
 [tool.pytest.ini_options]
-addopts = "-ra -q"
 testpaths = ["tests"]
+addopts = "-ra -q"
 
 [tool.coverage.run]
+source = ["src"]
 branch = true
-source = ["template"]
 
 [tool.coverage.report]
-omit = ["tests/**", "docs/**", "scripts/**"]
+omit = ["**/.*"]
 show_missing = true
 
 [tool.coverage.html]
