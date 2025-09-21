@@ -59,9 +59,6 @@ ignore = [
   "S101", # assert
 ]
 
-[tool.ruff.lint.isort]
-known-first-party = ["template"]
-
 [tool.black]
 line-length = 88
 target-version = ["py313"]
@@ -75,6 +72,7 @@ branch = true
 source = ["template"]
 
 [tool.coverage.report]
+omit = ["tests/**", "docs/**", "scripts/**"]
 show_missing = true
 
 [tool.coverage.html]
