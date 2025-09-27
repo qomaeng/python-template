@@ -34,6 +34,9 @@ venvPath = "."
 venv = ".venv"
 typeCheckingMode = "strict"
 
+[[tool.pyright.executionEnvironments]]
+root = "src"
+
 [tool.ruff]
 include = ["pyproject.toml", "{src,tests}/**/*.{py,pyi}"]
 extend-exclude = ["**/.*"]
