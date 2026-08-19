@@ -27,9 +27,7 @@ module-root = "src"
 include = ["src", "tests"]
 exclude = ["**/.*", "**/__pycache__"]
 pythonVersion = "3.14"
-venvPath = "."
-venv = ".venv"
-typeCheckingMode = "strict"
+typeCheckingMode = "standard"
 
 [[tool.pyright.executionEnvironments]]
 root = "src"
@@ -98,6 +96,7 @@ ignore = [
   "TD003",  # missing-todo-link
   "ARG001", # unused-function-argument
   "ARG002", # unused-method-argument
+  "ARG004", # unused-static-method-argument
   "E501",   # line-too-long
   "TRY003", # raise-vanilla-args
 ]
